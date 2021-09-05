@@ -1,0 +1,11 @@
+<div class="row" class="animated fadeIn">
+    <div class="col">
+        <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista ...">
+    </div>
+</div>
+<hr>
+
+<app-loading class="animated fadeIn" *ngIf="loading"></app-loading>
+
+
+<app-tarjetas class="animated fadeIn" [items]="busquedaArtistas"></app-tarjetas>
